@@ -292,7 +292,7 @@ LCD.prototype._sleep = function (milli) {
 
 // <<<<<<< alexfederlin-patch-1
 		//Set cursor to correct line.
-		if ( line > 0 && line <= this.rows ) {
+		if ( line < 1 && line <= this.rows ) {
 			this.write( LCD.LINEADDRESS[line], displayPorts.CMD );
 			this._sleep(2);
 		};
